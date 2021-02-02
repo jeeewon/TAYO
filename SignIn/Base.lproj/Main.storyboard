@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SignIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pju-oy-D47">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SCJ-rC-4eR" customClass="GIDSignInButton">
+                                <rect key="frame" x="72" y="194" width="270" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="7Ja-bo-y1O"/>
+                                    <constraint firstAttribute="width" constant="270" id="Ebd-4s-1Zh"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="signin:" destination="BYZ-38-t0r" eventType="valueChanged" id="pIZ-mq-iN1"/>
+                                </connections>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C4I-B0-r0I">
+                                <rect key="frame" x="72" y="328" width="270" height="48"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="LDx-Ad-pUk"/>
+                                    <constraint firstAttribute="height" constant="48" id="ZOr-1J-ApI"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKA-J6-4CP">
+                                <rect key="frame" x="72" y="384" width="270" height="48"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="aiA-88-cxL"/>
+                                    <constraint firstAttribute="width" constant="270" id="eJV-ty-hSQ"/>
+                                </constraints>
+                                <state key="normal" title="Login or Sign">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z23-Pn-Rw0"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C4y-hF-e6y">
+                                <rect key="frame" x="72" y="272" width="270" height="48"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="63b-PO-Qfz"/>
+                                    <constraint firstAttribute="height" constant="48" id="M3U-4D-Zga"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="email:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Gjc-XE-5Ap"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vZO-96-97K"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vZO-96-97K" firstAttribute="trailing" secondItem="C4y-hF-e6y" secondAttribute="trailing" constant="72" id="2lO-eS-RB3"/>
+                            <constraint firstItem="SCJ-rC-4eR" firstAttribute="leading" secondItem="vZO-96-97K" secondAttribute="leading" constant="72" id="6HQ-3R-sgF"/>
+                            <constraint firstItem="SCJ-rC-4eR" firstAttribute="top" secondItem="vZO-96-97K" secondAttribute="top" constant="150" id="ImP-co-qoQ"/>
+                            <constraint firstItem="vZO-96-97K" firstAttribute="trailing" secondItem="tKA-J6-4CP" secondAttribute="trailing" constant="72" id="OBQ-Og-GG9"/>
+                            <constraint firstItem="tKA-J6-4CP" firstAttribute="top" secondItem="C4I-B0-r0I" secondAttribute="bottom" constant="8" id="Pvc-Jp-Zna"/>
+                            <constraint firstItem="vZO-96-97K" firstAttribute="trailing" secondItem="C4I-B0-r0I" secondAttribute="trailing" constant="72" id="U78-cL-Qqj"/>
+                            <constraint firstItem="vZO-96-97K" firstAttribute="trailing" secondItem="SCJ-rC-4eR" secondAttribute="trailing" constant="72" id="W7b-VD-WPR"/>
+                            <constraint firstItem="C4I-B0-r0I" firstAttribute="top" secondItem="C4y-hF-e6y" secondAttribute="bottom" constant="8" id="avg-II-ILJ"/>
+                            <constraint firstItem="C4y-hF-e6y" firstAttribute="top" secondItem="SCJ-rC-4eR" secondAttribute="bottom" constant="30" id="e6m-Q7-DYh"/>
+                            <constraint firstItem="C4y-hF-e6y" firstAttribute="leading" secondItem="vZO-96-97K" secondAttribute="leading" constant="72" id="flS-Qq-DAw"/>
+                            <constraint firstItem="tKA-J6-4CP" firstAttribute="leading" secondItem="vZO-96-97K" secondAttribute="leading" constant="72" id="kT6-gv-PYA"/>
+                            <constraint firstItem="C4I-B0-r0I" firstAttribute="leading" secondItem="vZO-96-97K" secondAttribute="leading" constant="72" id="mJ6-XS-1Qf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="email" destination="C4y-hF-e6y" id="QXC-ax-Bdc"/>
+                        <outlet property="password" destination="C4I-B0-r0I" id="T8P-Tp-4Xw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
